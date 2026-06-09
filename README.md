@@ -73,7 +73,22 @@ binds the web UI to `127.0.0.1` by default. If the port is taken, set
 `APP_PORT=7001` in `.env` and recreate the container. Set `APP_BIND=0.0.0.0`
 only when you intentionally want LAN/reverse-proxy access.
 
-### Native Linux / macOS
+### Native Linux
+For an automated setup that checks dependencies, sets up a local Python environment, and launches the app natively on Linux:
+
+```bash
+git clone https://github.com/pewdiepie-archdaemon/odysseus.git
+cd odysseus
+./start-linux.sh
+```
+
+It launches at `http://127.0.0.1:7860`. To build and install a Linux desktop application shortcut (with Chrome/Brave/Edge `--app` window integration):
+
+```bash
+./build-linux-app.sh
+```
+
+### Native Linux / macOS (Manual Setup)
 ```bash
 git clone https://github.com/pewdiepie-archdaemon/odysseus.git
 cd odysseus
